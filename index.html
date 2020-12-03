@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Chord Generator</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+
+        <body>
+            <p id="chord">Chord Not Generated Yet</p>
+            <p id="quality">&nbsp;</p>
+
+            <!-- Key Choices -->
+            <form id="key_choices">
+                <input type="checkbox" id="key_c" name="key_c" value="C">
+                <label for="key_c">C</label>
+
+                <input type="checkbox" id="key_c#" name="key_c#" value="C#">
+                <label for="key_C#">C#</label>
+
+                <input type="checkbox" id="key_db" name="key_db" value="Db">
+                <label for="key_db">Db</label>
+
+                <input type="checkbox" id="key_d" name="key_d" value="D">
+                <label for="key_d">D</label>
+
+                <input type="checkbox" id="key_eb" name="key_eb" value="Eb">
+                <label for="key_eb">Eb</label>
+
+                <input type="checkbox" id="key_e" name="key_e" value="E">
+                <label for="key_e">E</label>
+
+                <input type="checkbox" id="key_f" name="key_f" value="F">
+                <label for="key_f">F</label>
+
+                <input type="checkbox" id="key_f#" name="key_f#" value="F#">
+                <label for="key_f#">F#</label>
+
+                <input type="checkbox" id="key_gb" name="key_gb" value="Gb">
+                <label for="key_gb">Gb</label>
+
+                <input type="checkbox" id="key_g" name="key_g" value="G">
+                <label for="key_g">G</label>
+
+                <input type="checkbox" id="key_ab" name="key_ab" value="Ab">
+                <label for="key_ab">Ab</label>
+
+                <input type="checkbox" id="key_bb" name="key_bb" value="Bb">
+                <label for="key_bb">Bb</label>
+
+                <input type="checkbox" id="key_b" name="key_b" value="B">
+                <label for="key_b">B</label>
+
+                <button type="button" onclick="clear_all('key_choices')">Clear All</button>
+                <button type="button" onclick="select_all('key_choices')">Select All</button>
+
+                <!--['C', 'C#', 'Db', 'D', 'Eb', 'F', 'F#', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B', ]-->
+            </form>
+
+            <br/>
+
+            <form id="chord_type_choices">
+                
+                <label for="major">
+                    <input type="checkbox" id="major" name="major" value=""> Major Triad
+                </label>
+
+                <input type="checkbox" id="minor" name="minor" value="m">
+                <label for="minor">Minor Triad</label>
+
+                <input type="checkbox" id="dim" name="dim" value="dim">
+                <label for="dim">Diminished Triad</label>
+
+                <input type="checkbox" id="aug" name="aug" value="+">
+                <label for="aug">Augmented Triad</label>
+
+                <input type="checkbox" id="maj7" name="maj7" value="maj7">
+                <label for="maj7">Major 7th</label>
+
+                <input type="checkbox" id="dom7" name="dom7" value="7">
+                <label for="dom7">Dominant 7th</label>
+
+                <input type="checkbox" id="minmaj7" name="minmaj7" value="mM7">
+                <label for="minmaj7">Minor-Major 7th</label>
+
+                <input type="checkbox" id="min7" name="min7" value="m7">
+                <label for="min7">Minor 7th</label>
+
+                <input type="checkbox" id="halfdim" name="halfdim" value=&oslash;>
+                <label for="halfdim">Half Diminished</label>
+
+                <input type="checkbox" id="fulldim" name="fulldim" value="o">
+                <label for="fulldim">Fully Diminished</label>
+
+                <input type="checkbox" id="augmaj7" name="augmaj7" value="+maj7">
+                <label for="augmaj7">Augmented Major 7th</label>
+
+                <input type="checkbox" id="aug7" name="aug7" value="+7">
+                <label for="aug7">Augmented 7th</label>
+
+                <button type="button" onclick="clear_all('chord_type_choices')">Clear All</button>
+                <button type="button" onclick="select_all('chord_type_choices')">Select All</button>
+            </form>
+
+            <form id="inversion_form">
+                <label>
+                    <input type="checkbox" id="toggle" name="toggle"> Show Chord Inversions
+                </label>
+            </form>
+
+            <button onclick="generate()">GENERATE</button>
+
+
+        </body>
+        <script src="script.js"></script>
+    </html>
+</html>
